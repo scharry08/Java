@@ -1,0 +1,15 @@
+Java8 features
+
+
+default methods
+static
+
+lambda expressions
+
+java fx
+
+method reference
+
+stream api
+
+Nashorn engine
