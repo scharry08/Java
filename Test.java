@@ -17,17 +17,19 @@ class DoubleLinkList<T>
                 else
                 {
                         tail.next = n;
+						n.prev = tail;
                         tail = n;
                 }
                 return 0;
         }
         public int addBack(Node<T> n)
         {
-                if(tail == null && tail == null)
+                if(head == null && tail == null)
                         head = tail = n;
                 else
                 {
                         head.prev = n;
+						n.next = head;
                         head = n;
                 }
                 return 0;
@@ -79,7 +81,13 @@ public class Test
         {
                 DoubleLinkList<Integer> list = new DoubleLinkList();
                 list.addFront(new Node<Integer>(5));
-                list.addFront(new Node<Integer>(4));
+                list.addBack(new Node<Integer>(4));
+                list.addBack(new Node<Integer>(3));
+                list.addFront(new Node<Integer>(40));
+                System.out.println(list.print());
+                list.removeBack();
+                System.out.println(list.print());
+                list.removeFront();
                 System.out.println(list.print());
         }
 }
